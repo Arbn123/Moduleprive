@@ -1,0 +1,6 @@
+numpy
+requests
+instaloader
+pytubefix
+bs4
+yt-dlp
