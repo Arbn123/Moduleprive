@@ -7,6 +7,7 @@ def download_set_youtube(l):
         download_youtube(i)
 
 def download_youtube(url):
+    '''Download one single youtube video'''
     from pytubefix import YouTube
     from pytubefix.cli import on_progress
     yt = YouTube(url, on_progress_callback=on_progress)
@@ -67,16 +68,14 @@ def fetch():
 
 
 def download_photo(nom):
-    '''download pictures and videos of an instagram account only
-    by giving the nickname of the account'''
+    '''download pictures and videos of an instagram account only by giving the nickname of the account'''
     import time
     import instaloader as i
     import os
     import Oussama.fcts as fct
     os.chdir(r"C:\Users\arban")
-    #loader = i.Instaloader(download_pictures=True, download_videos=True, download_video_thumbnails=False, download_geotags=False, download_comments=False,compress_json=False,save_metadata=False)
     loader = i.Instaloader(download_pictures=True, download_videos=True, download_video_thumbnails=True, download_geotags=False, download_comments=False,compress_json=False,save_metadata=False,check_resume_bbd=False)
-    loader.load_session_from_file("plaisirplaisir95")
+    loader.load_session_from_file("loginpla")
     profile=i.Profile.from_username(loader.context,nom)
     c=0
     for j in profile.get_posts():
