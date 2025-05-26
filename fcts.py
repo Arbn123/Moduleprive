@@ -55,7 +55,7 @@ def fetch():
     print("Search for a proxy")
     while j<len(http):
         try:
-            login = session.post('https://www.instagram.com/accounts/login/ajax/',data={'enc_password': "Spiderman-123", 'username': "plaisirplaisir95"},allow_redirects=True,proxies={'https':http[j],'http':http[j]},timeout=2)
+            login = session.post('https://www.instagram.com/accounts/login/ajax/',data={'enc_password': "", 'username': ""},allow_redirects=True,proxies={'https':http[j],'http':http[j]},timeout=2)
             print(http[j]+" is working")
             #login=requests.get(url,proxies={'https':http[j],'http':http[j]},timeout=2,stream=True) #proxies={https,http}
             #print(http[j]+" is working")
