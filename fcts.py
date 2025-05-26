@@ -1,11 +1,5 @@
 
 
-def download_set_youtube(l):
-    '''Downloads multiple youtube videos '''
-    l=list(set(l))
-    for i in l:
-        download_youtube(i)
-
 def download_youtube(url):
     '''Download one single youtube video'''
     from pytubefix import YouTube
@@ -14,6 +8,13 @@ def download_youtube(url):
     print(f"Téléchargement de : {yt.title}")
     ys = yt.streams.get_highest_resolution()
     ys.download(output_path="C:\\Users\\arban\\Downloads")
+
+
+def download_set_youtube(l):
+    '''Downloads multiple youtube videos '''
+    l=list(set(l))
+    for i in l:
+        download_youtube(i)
 
 # def download_youtube(link,pathh="C:\\Users\\arban\\Downloads"):
 #     '''downloads one youtube video'''
